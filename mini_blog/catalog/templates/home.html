@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title %}<title>Mini Blog project </title>{% endblock%}
+    {% load static %}
+</head>
+<body>
+    <header>
+        <h1>Juan's Blog Project</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <nav>
+        <div class="navchoice">
+            <a href="{% url 'Home' %}">Home</a>
+        </div>
+        <div class="navchoice">
+            <a href="{% url 'Recents' %}">Recent Posts</a>
+        </div>
+        <div class="navchoice">
+            <a href="{% url 'Bloggers' %}">View other Bloggers</a>
+        </div>
+    </nav>
+    <footer>
+    </footer>
+</body>
+</html>
